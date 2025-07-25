@@ -1,0 +1,7 @@
+.page-footer {
+  display: flex;
+  block-size: 80px;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 90px;
+}
