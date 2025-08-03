@@ -6,11 +6,10 @@ import './style.css';
 function MainPage() {
   return (
     <main className="main">
-      <Wrapper>
-        <About />        
-        <Advantages />
-        <Button>Купить</Button>
-      </Wrapper>
+      <h1 className="visually-hidden">Магазин фермерских продуктов</h1>
+      <About />
+      <Advantages />
+      <Button>Купить</Button>
     </main>
   )
 }

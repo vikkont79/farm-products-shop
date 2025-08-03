@@ -1,0 +1,43 @@
+.about {
+  position: relative;  
+  background-color: #d8ecfe;
+}
+
+.about__info {
+  margin-inline-end: 463px;
+  padding-block: 183px;
+  text-align: start;
+}
+
+.about__title {
+  margin-block-end: 24px;
+}
+
+.about__text {
+  margin-inline-end: 99px;
+  margin-block-end: 0px; 
+}
+
+.about__image {
+  position: absolute;
+  display: inline-block;
+  inline-size: 446px;
+  block-size: 446px;
+  top: 76px;
+  left: 744px;
+  content: "";
+  background-image: url("../../../../assets/images/ellipse.svg");
+}
+
+.about__image::after {
+  position: absolute;
+  display: block;
+  inline-size: 273px;
+  block-size: 627px;
+  top: -39px;
+  left: 86px;
+  content: "";  
+  background-image: url("../../../../assets/images/farmer.png");
+  background-repeat: no-repeat;
+
+}

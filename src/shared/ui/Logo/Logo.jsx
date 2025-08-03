@@ -1,4 +1,4 @@
-import logo from '../../../assets/images/farmer.png';
+import logo from '../../../assets/images/farmer-logo.png';
 import './style.css';
 
 function Logo() {
