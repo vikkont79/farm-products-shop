@@ -1,5 +1,4 @@
-import { Wrapper } from "../../../../shared/ui";
-import { Logo } from "../../../../shared/ui";
+import { Logo } from "@/shared/ui";
 import './style.css';
 
 function Footer() {

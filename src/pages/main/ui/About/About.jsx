@@ -1,4 +1,4 @@
-import { Wrapper } from '../../../../shared/ui';
+import { Wrapper } from '@/shared/ui';
 import './style.css';
 
 function About() {

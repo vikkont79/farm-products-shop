@@ -1,4 +1,4 @@
-import { FeatureCard, Wrapper } from "../../../../shared/ui";
+import { FeatureCard, Wrapper } from "@/shared/ui";
 import './style.css';
 
 

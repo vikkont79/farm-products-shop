@@ -1,5 +1,4 @@
-import { Button, Wrapper } from "../../../../shared/ui";
-import { Logo } from "../../../../shared/ui";
+import { Button, Logo } from "@/shared/ui";
 import './style.css';
 
 function Header() {

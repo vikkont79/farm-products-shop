@@ -1,5 +1,3 @@
-import { Children } from "react";
-import { MainPage } from "../../../pages/main";
 import './style.css';
 
 function Wrapper({ children }) {
