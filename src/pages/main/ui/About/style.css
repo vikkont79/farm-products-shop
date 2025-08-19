@@ -4,7 +4,7 @@
 }
 
 .about__info {
-  margin-inline-end: 463px;
+  max-inline-size: 637px;  
   padding-block: 183px;
   text-align: start;
 }

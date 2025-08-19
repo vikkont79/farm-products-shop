@@ -1,6 +1,5 @@
 import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
-//import { Wrapper } from "../../../../shared/ui";
 import './style.css';
 
 function Layout({ children }) {
