@@ -8,6 +8,6 @@ function Header() {
       <Button>Купить</Button>
     </header >
   )
-}
+};
 
 export { Header };

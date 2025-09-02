@@ -16,6 +16,6 @@ function FeatureCard({ label, title, description, advantage }) {
       />
     </li>
   )
-}
+};
 
-export { FeatureCard }
+export { FeatureCard };

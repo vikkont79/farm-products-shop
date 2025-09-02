@@ -1,6 +1,5 @@
 .button {
-  display: inline-block;
-  min-inline-size: 260px;
+  display: inline-block;  
   padding-inline: 12px;
   padding-block: 16px;
   border: none;

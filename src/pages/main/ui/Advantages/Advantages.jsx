@@ -15,6 +15,6 @@ function Advantages({ advantages }) {
       </Wrapper>
     </section>
   )
-}
+};
 
-export { Advantages }
+export { Advantages };

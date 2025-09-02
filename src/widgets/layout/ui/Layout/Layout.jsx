@@ -10,6 +10,6 @@ function Layout({ children }) {
       <Footer />
     </div>
   )
-}
+};
 
-export { Layout }
+export { Layout };

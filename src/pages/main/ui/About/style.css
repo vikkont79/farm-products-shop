@@ -26,7 +26,7 @@
   top: 76px;
   left: 744px;
   content: "";
-  background-image: url("../../../../assets/images/ellipse.svg");
+  background-image: url("@assets/images/ellipse.svg");
 }
 
 .about__image::after {

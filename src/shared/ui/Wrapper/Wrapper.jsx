@@ -6,6 +6,6 @@ function Wrapper({ children }) {
       {children}
     </div>
   )
-}
+};
 
 export { Wrapper };

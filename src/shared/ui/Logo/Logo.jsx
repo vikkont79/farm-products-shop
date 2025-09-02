@@ -8,6 +8,6 @@ function Logo() {
       <span className="logo__text">Фермерские продукты</span>
     </a>
   )
-}
+};
 
 export { Logo };

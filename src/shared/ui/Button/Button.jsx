@@ -1,11 +1,11 @@
 import './style.css';
 
-function Button({ children }) {
+function Button({ children, minInlineSize }) {
   return (
-    <button className="button" type="button">
+    <button className="button" style={{minInlineSize: minInlineSize}} type="button">
       {children}
     </button>
   )
-}
+};
 
-export { Button }
+export { Button };

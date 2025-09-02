@@ -8,6 +8,6 @@ function App() {
       <MainPage></MainPage>
     </Layout>
   )
-}
+};
 
-export default App
+export { App };

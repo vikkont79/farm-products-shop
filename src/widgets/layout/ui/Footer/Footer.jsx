@@ -8,6 +8,6 @@ function Footer() {
       <span className="footer__copyright">Создано 2021</span>
     </footer>
   )
-}
+};
 
 export { Footer };

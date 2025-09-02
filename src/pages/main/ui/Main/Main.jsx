@@ -1,4 +1,4 @@
-import { Button, Wrapper } from '@/shared/ui';
+import { Button } from '@/shared/ui';
 import { advantages } from '../../model';
 import { About } from '../About/About'
 import { Advantages } from '../Advantages/Advantages';
@@ -10,9 +10,9 @@ function MainPage() {
       <h1 className="visually-hidden">Магазин фермерских продуктов</h1>
       <About />
       <Advantages advantages={advantages} />
-      <Button>Купить</Button>
+      <Button minInlineSize={260}>Купить</Button>
     </main>
   )
-}
+};
 
 export { MainPage };
