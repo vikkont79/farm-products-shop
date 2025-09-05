@@ -1,8 +1,10 @@
-function Title({ children, size }) {
+import { StyledTitle } from './styles';
+
+function Title({ children, size, className }) {
   return (
-    <p className={`title${size ? ` title__${size}` : ""}`}>
+    <StyledTitle $size={size} className={className}>
       {children}
-    </p>
+    </StyledTitle>
   )
 };
 

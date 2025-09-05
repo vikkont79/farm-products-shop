@@ -1,7 +1,6 @@
 const TitleSize = {
   BIG: "big",
-  SMALL: "small",
-  DEFAULT: ""
+  SMALL: "small", 
 };
 
 export { TitleSize };

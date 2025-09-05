@@ -1,10 +1,10 @@
-import './style.css';
+import { StyledWrapper } from "./styles";
 
 function Wrapper({ children }) {
   return (
-    <div className="wrapper">
+    <StyledWrapper>
       {children}
-    </div>
+    </StyledWrapper>
   )
 };
 
