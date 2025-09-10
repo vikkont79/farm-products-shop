@@ -1,14 +1,14 @@
 import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
-import './style.css';
+import { StyledLayout } from "./styles";
 
 function Layout({ children }) {
   return (
-    <div className="page">
+    <StyledLayout>
       <Header />
       {children}
       <Footer />
-    </div>
+    </StyledLayout>
   )
 };
 

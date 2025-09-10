@@ -1,12 +1,17 @@
 import { FeatureCard, Wrapper } from "@/shared/ui";
+import { Title } from '@/shared/ui';
 import './style.css';
+import styled from "styled-components";
 
+const AdvantagesIntro = styled(Title)`
+  margin-block: 0 64px;
+`;
 
 function Advantages({ advantages }) {
   return (
     <section className="advantages">
       <Wrapper>
-        <p className="advantages__intro title">Почему фермерские продукты лучше?</p>
+        <AdvantagesIntro>Почему фермерские продукты лучше?</AdvantagesIntro>
         <ul className="advantages__list">  
           {advantages.map((item) => (
             <FeatureCard key={item.id} {...item} />
