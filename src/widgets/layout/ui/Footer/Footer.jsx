@@ -1,12 +1,16 @@
+import { Copyright, FooterWrapper, StyledFooter } from "./styles";
 import { Logo } from "@/shared/ui";
-import './style.css';
+
+
 
 function Footer() {
   return (
-    <footer className="page-footer">
-      <Logo />
-      <span className="footer__copyright">Создано 2021</span>
-    </footer>
+    <StyledFooter>
+      <FooterWrapper>
+        <Logo />
+        <Copyright>Создано 2025</Copyright>
+      </FooterWrapper>
+    </StyledFooter >
   )
 };
 

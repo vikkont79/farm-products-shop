@@ -8,8 +8,6 @@ import {
   AboutImage
 } from './styles';
 
-
-
 function About() {
   return (
     <StyledAbout>

@@ -1,8 +1,12 @@
 import { StyledTitle } from './styles';
 
-function Title({ children, size, className }) {
+function Title({ children, level, size, className }) {
   return (
-    <StyledTitle $size={size} className={className}>
+    <StyledTitle
+      $size={size}
+      {...(level && { as: `h${level}` })}
+      className={className}
+    >
       {children}
     </StyledTitle>
   )

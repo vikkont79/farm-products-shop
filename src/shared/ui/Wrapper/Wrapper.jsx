@@ -1,8 +1,8 @@
 import { StyledWrapper } from "./styles";
 
-function Wrapper({ children }) {
+function Wrapper({ children, className }) {
   return (
-    <StyledWrapper>
+    <StyledWrapper className={className}>
       {children}
     </StyledWrapper>
   )

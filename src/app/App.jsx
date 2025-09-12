@@ -1,4 +1,3 @@
-import './styles/App.js';
 import { MainPage } from '@/pages/main';
 import { Layout } from '@/widgets/layout';
 import { GlobalStyle } from './styles/App.js';

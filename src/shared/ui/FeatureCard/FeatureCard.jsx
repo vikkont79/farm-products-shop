@@ -1,20 +1,21 @@
-import './style.css';
+import { CardLabel, CardTitle, FeatureText, StyledFeatureCard } from './styles';
 
 function FeatureCard({ label, title, description, advantage }) {
   const isFarmProduct = label === 'Фермерские продукты';
   return (
-    <li className={
-      `advantages__item 
-      advantages__item--${advantage} 
+    <StyledFeatureCard className={
+      `advantages__item--${advantage} 
       ${isFarmProduct ? `advantages__item--farm` : ''}`
     }>
-      <span className="advantages__label">{label}</span>
-      <p className="advantages__title">{title}</p>
-      <p
-        className="advantages__description"
-        dangerouslySetInnerHTML={{ __html: description }}
-      />
-    </li>
+      <CardLabel className={
+        `advantages__item--${advantage}
+        ${isFarmProduct ? `advantages__item--farm` : ''}`
+      }>
+        {label}
+      </CardLabel>
+      <CardTitle>{title}</CardTitle>
+      <FeatureText dangerouslySetInnerHTML={{ __html: description }}/>
+    </StyledFeatureCard>
   )
 };
 

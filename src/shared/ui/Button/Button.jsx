@@ -1,10 +1,14 @@
-import './style.css';
+import { StyledButton } from './styles';
 
-function Button({ children, minInlineSize }) {
+function Button({ children, minInlineSize, link, className }) {
   return (
-    <button className="button" style={{minInlineSize: minInlineSize}} type="button">
+    <StyledButton
+      $minInlineSize={minInlineSize}
+      {...(link ? { href: link } : { as: "button", type: "button" })}
+      className={className}
+    >
       {children}
-    </button>
+    </StyledButton>
   )
 };
 

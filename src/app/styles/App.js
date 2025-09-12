@@ -25,6 +25,7 @@ html {
   /* Цвета */
   --color-bg-primary: ${props => props.theme.colors.bgPrimary};
   --color-text-primary: ${props => props.theme.colors.textPrimary};
+  --color-button-primary: ${props => props.theme.colors.buttonPrimary};
 
   /* Шрифты */
     --font-family: ${props => props.theme.fonts.fontFamily};
