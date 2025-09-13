@@ -6,4 +6,12 @@ const flexBetweenCenter = css`
   align-items: center;
 `;
 
-export { flexBetweenCenter }
+const visuallyHidden = css`
+  position: absolute;
+  scale: 0;
+`;
+
+export {
+  flexBetweenCenter,
+  visuallyHidden,
+};

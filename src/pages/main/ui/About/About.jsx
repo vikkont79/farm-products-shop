@@ -5,13 +5,15 @@ import {
   StyledAbout,
   AboutTitle, 
   AboutInfo,
-  AboutImage
+  AboutImage,
+  HiddenTitle
 } from './styles';
 
 function About() {
   return (
     <StyledAbout>
       <Wrapper>
+        <HiddenTitle level={1}>Магазин фермерских продуктов</HiddenTitle>
         <AboutInfo>          
           <AboutTitle size={TitleSize.BIG}>Магазин фермерских продуктов с доставкой</AboutTitle>
           <AboutText>

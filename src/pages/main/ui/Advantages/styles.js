@@ -1,8 +1,13 @@
 import styled from 'styled-components';
 import { Title } from '@/shared/ui';
+import { visuallyHidden } from '@/shared/styles/mixins/mixins';
 
 const StyledAdvantages = styled.section`
    padding-block: 100px 64px;
+`;
+
+const HiddenTitle = styled(Title)`
+  ${visuallyHidden}
 `;
 
 const AdvantagesIntro = styled(Title)`
@@ -20,6 +25,7 @@ const AdvantagesList = styled.ul`
 
 export {
   StyledAdvantages,
+  HiddenTitle,
   AdvantagesIntro,
   AdvantagesList,
 }

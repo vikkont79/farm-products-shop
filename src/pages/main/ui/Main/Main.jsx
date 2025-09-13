@@ -6,8 +6,7 @@ import { StyledPage } from './styles';
 
 function MainPage() {
   return (
-    <StyledPage>
-      <h1 className="visually-hidden">Магазин фермерских продуктов</h1>
+    <StyledPage>      
       <About />
       <Advantages advantages={advantages} />
       <Button minInlineSize={260} link="/order">
