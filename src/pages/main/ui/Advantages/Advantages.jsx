@@ -9,7 +9,7 @@ import {
 
 
 function Advantages({ advantages }) {
-  return (
+  return advantages && advantages.length ? (
     <StyledAdvantages>
       <Wrapper>
         <HiddenTitle level={2}>Сравнение продуктов</HiddenTitle>
@@ -21,7 +21,7 @@ function Advantages({ advantages }) {
         </AdvantagesList>
       </Wrapper>
     </StyledAdvantages>
-  )
+  ) : null;
 };
 
 export { Advantages };
