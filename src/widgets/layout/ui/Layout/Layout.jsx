@@ -1,6 +1,6 @@
-import { Header } from "../Header/Header";
-import { Footer } from "../Footer/Footer";
-import { StyledLayout } from "./styles";
+import { Header } from '../Header/Header';
+import { Footer } from '../Footer/Footer';
+import { StyledLayout } from './styles';
 
 function Layout({ children }) {
   return (
