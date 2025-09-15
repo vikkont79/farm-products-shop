@@ -1,15 +1,15 @@
 import { Button, Logo } from "@/shared/ui";
-import { StyledHeader, HeaderWrapper } from "./styles";
+import { StyledHeader, HeaderNav } from "./styles";
 
 function Header() {
   return (
     <StyledHeader>
-      <HeaderWrapper>
+      <HeaderNav>
         <Logo />
         <Button minInlineSize={260} link="/order">
           Купить
         </Button>
-      </HeaderWrapper>
+      </HeaderNav>
     </StyledHeader>
   )
 };

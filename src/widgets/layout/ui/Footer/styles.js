@@ -1,10 +1,11 @@
 import styled from 'styled-components';
-import { Wrapper } from '@/shared/ui';
-import { flexBetweenCenter } from '@/shared/styles';
+import { flexBetweenCenter, wrapper } from '@/shared/styles';
+
 
 const StyledFooter = styled.footer``;
 
-const FooterWrapper = styled(Wrapper)`
+const FooterWrapper = styled.div`
+  ${wrapper}
   ${flexBetweenCenter}
   block-size: 80px;   
 `;

@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import { Title } from '@/shared/ui';
 import { visuallyHidden } from '@/shared/styles/mixins/mixins';
+import { wrapper } from '@/shared/styles/mixins/mixins';
 
 const StyledAdvantages = styled.section`
+  ${wrapper}
    padding-block: 100px 64px;
 `;
 

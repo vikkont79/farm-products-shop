@@ -1,27 +1,27 @@
-import { Wrapper } from '@/shared/ui';
 import { TitleSize } from '@/shared/ui';
-import { 
-  AboutText, 
+import {
+  AboutText,
   StyledAbout,
-  AboutTitle, 
+  AboutTitle,
   AboutInfo,
   AboutImage,
-  HiddenTitle
+  HiddenTitle,
+  AboutWrapper
 } from './styles';
 
 function About() {
   return (
     <StyledAbout>
-      <Wrapper>
+      <AboutWrapper>
         <HiddenTitle level={1}>Магазин фермерских продуктов</HiddenTitle>
-        <AboutInfo>          
+        <AboutInfo>
           <AboutTitle size={TitleSize.BIG}>Магазин фермерских продуктов с доставкой</AboutTitle>
           <AboutText>
             Все продукты изготавливаются под заказ. Фермеры<br /> начинают готовить продукты за день до отправки заказа клиентам. Именно поэтому мы принимаем заказы заранее<br /> и доставляем продукты максимально свежими.
           </AboutText>
         </AboutInfo>
         <AboutImage />
-      </Wrapper>
+      </AboutWrapper>
     </StyledAbout>
   )
 };

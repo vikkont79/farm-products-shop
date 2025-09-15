@@ -2,11 +2,15 @@ import styled from 'styled-components';
 import { Title } from '@/shared/ui';
 import ellips from '@assets/images/ellipse.svg';
 import farmer from '@assets/images/farmer.png';
-import { visuallyHidden } from '@/shared/styles/mixins/mixins';
+import { visuallyHidden, wrapper } from '@/shared/styles/mixins/mixins';
 
 const StyledAbout = styled.section`
-  position: relative;  
+  position: relative;   
   background-color: #d8ecfe;
+`;
+
+const AboutWrapper = styled.div`
+  ${wrapper}
 `;
 
 const HiddenTitle = styled(Title)`
@@ -53,6 +57,7 @@ const AboutImage = styled.div`
 
 export { 
   StyledAbout,
+  AboutWrapper,
   HiddenTitle,
   AboutInfo,
   AboutTitle,

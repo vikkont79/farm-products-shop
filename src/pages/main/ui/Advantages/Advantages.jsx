@@ -1,4 +1,4 @@
-import { FeatureCard, Wrapper } from "@/shared/ui";
+import { FeatureCard } from "@/shared/ui";
 import {
   StyledAdvantages,
   AdvantagesIntro,
@@ -10,16 +10,14 @@ import {
 
 function Advantages({ advantages }) {
   return advantages && advantages.length ? (
-    <StyledAdvantages>
-      <Wrapper>
+    <StyledAdvantages>      
         <HiddenTitle level={2}>Сравнение продуктов</HiddenTitle>
         <AdvantagesIntro>Почему фермерские продукты лучше?</AdvantagesIntro>
         <AdvantagesList>
           {advantages.map((item) => (
             <FeatureCard key={item.id} {...item} />
           ))}
-        </AdvantagesList>
-      </Wrapper>
+        </AdvantagesList>      
     </StyledAdvantages>
   ) : null;
 };

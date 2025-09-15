@@ -11,7 +11,12 @@ const visuallyHidden = css`
   scale: 0;
 `;
 
+const wrapper = css`
+  margin-inline: max(90px, (100% - 1100px) / 2);
+`;
+
 export {
   flexBetweenCenter,
   visuallyHidden,
+  wrapper,
 };
