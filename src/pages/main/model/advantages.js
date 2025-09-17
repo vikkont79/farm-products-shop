@@ -27,6 +27,6 @@ const advantages = [
     description: 'Мясные полуфабрикаты, в которых содержится<br/> чрезмерно много натрия, вредных жиров,<br/> консервантов',
     advantage: 'no-meat',
   },
-]
+];
 
-export { advantages }
+export { advantages };

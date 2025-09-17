@@ -1,6 +1,6 @@
 import { OrderForm } from '@/widgets/order';
-import {
-      
+import { products }  from '../../model';
+import {      
   StoreSection,  
   StyledPage
 }
@@ -11,7 +11,7 @@ function StorePage() {
   return (
     <StyledPage>
       <StoreSection>        
-          <OrderForm/>
+          <OrderForm products={products} />
           <Catalog />
       </StoreSection>
     </StyledPage >

@@ -9,6 +9,14 @@ const StyledControl = styled.li`
 const ControlLabel = styled.label`
   ${flexBetweenCenter}
   padding-block: 15px 14px;
+
+  &:has(input:hover) {
+    color: #FC7427
+  }
+
+  &:has(input[disabled]) {
+    opacity: 0.5;
+  }
 `;
 
 const ControlInput = styled.input`
@@ -33,6 +41,11 @@ const ControlInput = styled.input`
   &:focus-within {
     border: none;
     outline: 3px solid #FC7427; 
+  }
+
+  &:disabled {
+    background-color: #ccc;
+    
   }
 
   &::after {

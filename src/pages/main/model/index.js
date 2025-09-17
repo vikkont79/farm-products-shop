@@ -1,1 +1,1 @@
-export { advantages } from './advantages'
+export { advantages } from './advantages';
