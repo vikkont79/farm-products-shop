@@ -1,13 +1,11 @@
-import { ControlInput, ControlLabel, StyledControl } from "./styles";
+import { ControlInput, ControlLabel } from "./styles";
 
 function Control({ children, type, name, disabled }) {
-  return (
-    <StyledControl>
+  return (    
       <ControlLabel>        
         {children}
         <ControlInput type={type} name={name} disabled={disabled} />
-      </ControlLabel>
-    </StyledControl>
+      </ControlLabel>    
   )
 };
 

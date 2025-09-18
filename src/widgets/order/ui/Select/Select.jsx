@@ -1,4 +1,4 @@
-import { HiddenTitle, ProductsList, Select, SelectTitle } from './styles';
+import { HiddenTitle, ProductItem, ProductsList, Select, SelectTitle } from './styles';
 import { Control } from '@/shared/ui';
 
 function OrderSelect({ products }) {
@@ -8,14 +8,15 @@ function OrderSelect({ products }) {
       <SelectTitle>Выберите продукты</SelectTitle>
       <ProductsList>
         {products.map((item) => (
-          <Control
-            key={item.id}
-            type="checkbox"
-            name={`product-${item.id}`}
-            disabled={!item.inStock}
-          >
-            {item.title}
-          </Control>
+          <ProductItem key={item.id}>
+            <Control              
+              type="checkbox"
+              name={`product-${item.id}`}
+              disabled={!item.inStock}
+            >
+              {item.title}
+            </Control>
+          </ProductItem>
         ))}
       </ProductsList>
     </Select>

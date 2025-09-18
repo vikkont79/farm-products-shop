@@ -6,12 +6,12 @@ import { StyledPage } from './styles';
 
 function MainPage() {
   return (
-    <StyledPage>      
+    <StyledPage>
       <About />
       <Advantages advantages={advantages} />
       <Button minInlineSize={260} link="/order">
-          Купить
-        </Button>
+        Купить
+      </Button>
     </StyledPage>
   )
 };

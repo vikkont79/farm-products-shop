@@ -24,6 +24,7 @@ const ControlInput = styled.input`
   position: relative;
   inline-size: 24px;
   block-size: 24px;
+  margin: 0;
   background-color: #f6f6f6;
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: 100ms;

@@ -12,7 +12,6 @@ const Select = styled.fieldset`
   box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.04),
               0px 2px 6px 0px rgba(0, 0, 0, 0.04),
               0px 10px 20px 0px rgba(0, 0, 0, 0.04);
-
 `;
 
 const HiddenTitle = styled.legend`
@@ -34,9 +33,12 @@ const ProductsList = styled.ul`
   list-style-type: none;
 `;
 
+const ProductItem = styled.li``;
+
 export {
   Select,
   HiddenTitle,
   SelectTitle,
   ProductsList,
+  ProductItem,
 };

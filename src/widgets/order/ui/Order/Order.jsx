@@ -1,12 +1,13 @@
 import { OrderDetails } from '../Details/Details';
 import { OrderSelect } from '../Select/Select';
-import { StyledForm } from './styles';
+import { HiddenTitle, StyledForm } from './styles';
 
-function OrderForm({ products }) {
+function OrderForm({ products, formId }) {
   return (
-    <StyledForm action="https://echo.htmlacademy.ru/" method="get" id="order-form">
+    <StyledForm action="https://echo.htmlacademy.ru/" method="get" id={`${formId}-form`}>
+      <HiddenTitle level={2}>Форма заказа товаров</HiddenTitle>
       <OrderSelect products={products} />
-      <OrderDetails />
+      <OrderDetails formId={formId} />
     </StyledForm>
   )
 };

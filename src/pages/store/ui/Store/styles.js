@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { wrapper } from '@/shared/styles/mixins/mixins';
+import { Title } from '@/shared/ui';
+import { visuallyHidden, wrapper } from '@/shared/styles/mixins/mixins';
 
 const StyledPage = styled.main`
   padding-block-start: 40px; 
@@ -12,7 +13,12 @@ const StoreSection = styled.section`
   gap: 20px;
 `;
 
+const HiddenTitle = styled(Title)`
+  ${visuallyHidden}
+`;
+
 export {
   StyledPage,
-  StoreSection,  
+  StoreSection,
+  HiddenTitle,  
 };
