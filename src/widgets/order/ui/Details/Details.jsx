@@ -20,7 +20,7 @@ function OrderDetails({ formId }) {
         Цена
         <PriceValue>1200 руб.</PriceValue>
       </Price>
-      <Button minInlineSize={314} >
+      <Button minInlineSize={314} type="submit" >
         Купить
       </Button>
     </Details>
