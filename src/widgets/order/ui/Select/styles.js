@@ -27,13 +27,15 @@ const SelectTitle = styled.p`
 
 const ProductsList = styled.ul`
   margin: 0;
-  padding-inline: 20px 16px;
+  padding: 0;
   padding-block-end: 8px;
   border-block-end: 1px solid rgba(0, 0, 0, 0.1);
   list-style-type: none;
 `;
 
-const ProductItem = styled.li``;
+const ProductItem = styled.li`
+  padding-inline: 20px 16px;
+`;
 
 export {
   Select,

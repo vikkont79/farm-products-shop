@@ -1,9 +1,9 @@
-import { CardLabel, CardTitle, FeatureText, StyledFeatureCard } from './styles';
+import { CardLabel, CardTitle, FeatureText, StyledCard } from './styles';
 
 function FeatureCard({ label, title, description, advantage }) {
   const isFarmProduct = label === 'Фермерские продукты';
   return (
-    <StyledFeatureCard className={
+    <StyledCard className={
       `advantages__item--${advantage} 
       ${isFarmProduct ? `advantages__item--farm` : ''}`
     }>
@@ -15,7 +15,7 @@ function FeatureCard({ label, title, description, advantage }) {
       </CardLabel>
       <CardTitle>{title}</CardTitle>
       <FeatureText dangerouslySetInnerHTML={{ __html: description }}/>
-    </StyledFeatureCard>
+    </StyledCard>
   )
 };
 

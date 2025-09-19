@@ -4,7 +4,7 @@ import garbageIcon from '@assets/images/garbage.svg';
 import sproutIcon from '@assets/images/sprout.svg';
 import noMeatIcon from '@assets/images/no-meat.svg';
 
-const StyledFeatureCard = styled.li`
+const StyledCard = styled.li`
   padding: 20px;
   background-color: #f8ddd7;
   text-align: start;
@@ -69,7 +69,7 @@ const FeatureText = styled.p`
 `;
 
 export {
-  StyledFeatureCard,
+  StyledCard,
   CardLabel,
   CardTitle,
   FeatureText,

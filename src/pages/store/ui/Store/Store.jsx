@@ -14,7 +14,7 @@ function StorePage() {
       <StoreSection>
         <HiddenTitle level={1}>Каталог товаров с формой заказа</HiddenTitle>
         <OrderForm products={products} formId="order" />
-        <Catalog />
+        <Catalog products={products} />
       </StoreSection>
     </StyledPage >
   )

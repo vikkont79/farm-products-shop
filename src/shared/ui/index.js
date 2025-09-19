@@ -5,4 +5,6 @@ export { FeatureCard } from './FeatureCard/FeatureCard';
 export { Title } from './Title/Title';
 export { TitleSize } from './Title/constants';
 export { Control } from './Control/Control';
-export { Input } from './Input/Input'
+export { Input } from './Input/Input';
+export { ProductCard } from './ProductCard/ProductCard';
+export { Tabs } from './Tabs/Tabs';

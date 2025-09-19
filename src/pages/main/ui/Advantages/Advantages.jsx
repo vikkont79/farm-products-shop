@@ -1,10 +1,10 @@
-import { FeatureCard } from "@/shared/ui";
+import { FeatureCard } from '@/shared/ui';
 import {
   StyledAdvantages,
   AdvantagesIntro,
   AdvantagesList,
   HiddenTitle
-} from "./styles";
+} from './styles';
 
 
 

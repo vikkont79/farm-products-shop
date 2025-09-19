@@ -9,7 +9,9 @@ const StyledPage = styled.main`
 
 const StoreSection = styled.section`
   ${wrapper}
-  display: flex;  
+  block-size: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;  
   gap: 20px;
 `;
 
