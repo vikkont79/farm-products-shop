@@ -8,11 +8,10 @@ const StyledPage = styled.main`
 `;
 
 const StoreSection = styled.section`
-  ${wrapper}
-  block-size: 100%;
+  ${wrapper}  
   display: grid;
   grid-template-columns: auto 1fr;  
-  gap: 20px;
+  gap: 20px;  
 `;
 
 const HiddenTitle = styled(Title)`
