@@ -16,12 +16,15 @@ const StyledButton = styled.a`
   cursor: pointer;
 
   &:hover,
-  &:active {
+  &:active,
+  &:focus-visible {
     background-color: #FC7427; 
     box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.14) inset;
   }
 
-  &:active {
+  &:active,
+  &:focus-visible {
+    outline: none;
     box-shadow: none;
   }
 `;
