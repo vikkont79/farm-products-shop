@@ -1,4 +1,4 @@
-import { FeatureCard } from '@/shared/ui';
+import { FeatureCard } from '@/widgets/feature-card';
 import {
   StyledAdvantages,
   AdvantagesIntro,
