@@ -5,23 +5,21 @@ function Tabs({ description, specifications, properties }) {
   const [activeTab, setActiveTab] = useState('description'); // Начальный активный таб
 
   return (
-    <div>
+    <>
       <TabsList>
-        <TabsButton
-          onClick={() => setActiveTab('description')}
-        >
+        <TabsButton onClick={() => setActiveTab('description')}>
           {description.title}
         </TabsButton>
-        <TabsButton
-          onClick={() => setActiveTab('specifications')}
-        >
-          {specifications.title}
-        </TabsButton>
-        <TabsButton
-          onClick={() => setActiveTab('properties')}
-        >
-          {properties.title}
-        </TabsButton>
+        {specifications &&
+          <TabsButton onClick={() => setActiveTab('specifications')}>
+            {specifications.title}
+          </TabsButton>
+        }
+        {properties &&
+          <TabsButton onClick={() => setActiveTab('properties')}>
+            {properties.title}
+          </TabsButton>
+        }
       </TabsList>
 
       {activeTab === 'description' && (
@@ -56,7 +54,7 @@ function Tabs({ description, specifications, properties }) {
           </TabsText>
         </TabsPanel>
       )}
-    </div>
+    </>
   );
 }
 
