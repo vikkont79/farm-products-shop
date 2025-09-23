@@ -26,7 +26,7 @@ const CardImage = styled.img`
   display: block;
 `;
 
-const CardInfo = styled.div`
+const CardContent = styled.div`
  text-align: start;
  font-size: 14px;
 `;
@@ -40,6 +40,6 @@ export {
   StyledCard,
   CardLink,
   CardImage,
-  CardInfo,
+  CardContent,
   CardTitle,
 }

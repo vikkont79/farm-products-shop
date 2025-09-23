@@ -5,5 +5,6 @@ export { Title } from './Title/Title';
 export { TitleSize } from './Title/constants';
 export { Control } from './Control/Control';
 export { Input } from './Input/Input';
+export { LabeledText } from './LabledText/LabeledText';
 
 

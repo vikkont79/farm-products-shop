@@ -1,61 +1,61 @@
 import { useState } from 'react';
-import { BoldText, TabsButton, TabsList, TabsPanel, TabsPrice, TabsText } from './styles';
+import { TabsButton, TabsList, TabsPanel } from './styles';
+import { Description } from '../Description/Description';
+import { Specifications } from '../Specifications/Specifications';
+import { Properties } from '../Properties/Properties';
 
 function Tabs({ description, specifications, properties }) {
   const [activeTab, setActiveTab] = useState('description'); // Начальный активный таб
+  const handleTabClick = (key) => setActiveTab(key);
+  
+  const tabs = [
+    {
+      key: 'description',
+      title: description.title,
+    },
+    {
+      key: 'specifications',
+      title: specifications.title,
+    },
+    {
+      key: 'properties',
+      title: properties.title,
+    },
+  ].filter(Boolean);
 
   return (
     <>
       <TabsList>
-        <TabsButton onClick={() => setActiveTab('description')}>
-          {description.title}
-        </TabsButton>
-        {specifications &&
-          <TabsButton onClick={() => setActiveTab('specifications')}>
-            {specifications.title}
+        {tabs.map(tab => (
+          <TabsButton
+            key={tab.key}
+            onClick={() => handleTabClick(tab.key)}
+            $active={activeTab === tab.key}
+          >
+            {tab.title}
           </TabsButton>
-        }
-        {properties &&
-          <TabsButton onClick={() => setActiveTab('properties')}>
-            {properties.title}
-          </TabsButton>
-        }
+        ))}
       </TabsList>
 
       {activeTab === 'description' && (
         <TabsPanel>
-          <TabsText>{description.text}</TabsText>
-          <TabsPrice>Цена: {description.price}</TabsPrice>
+          <Description description={description} />
         </TabsPanel>
       )}
+
       {activeTab === 'specifications' && (
         <TabsPanel>
-          <TabsText>
-            <BoldText>{specifications.weight.key}</BoldText>{specifications.weight.value}
-          </TabsText>
-          <TabsText>
-            <BoldText>{specifications.breed.key}</BoldText>{specifications.breed.value}
-          </TabsText>
-          <TabsText>
-            <BoldText>{specifications.placeOfOrigin.key}</BoldText>{specifications.placeOfOrigin.value}
-          </TabsText>
-          <TabsText>
-            <BoldText>{specifications.shelfLife.key}</BoldText>{specifications.shelfLife.value}
-          </TabsText>
+          <Specifications specifications={specifications} />
         </TabsPanel>
       )}
+
       {activeTab === 'properties' && (
         <TabsPanel>
-          <TabsText>
-            <BoldText>{properties.energyValue.key}</BoldText>{properties.energyValue.value}
-          </TabsText>
-          <TabsText>
-            <BoldText>{properties.nutritionalValue.key}</BoldText>{properties.nutritionalValue.value}
-          </TabsText>
+          <Properties properties={properties} />
         </TabsPanel>
       )}
     </>
-  );
-}
+  )
+};
 
 export { Tabs };

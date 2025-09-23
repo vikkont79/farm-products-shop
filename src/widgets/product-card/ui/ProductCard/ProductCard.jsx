@@ -1,5 +1,5 @@
 import { Tabs } from '../Tabs/Tabs';
-import { CardImage, CardInfo, CardLink, CardTitle, StyledCard } from './styles';
+import { CardImage, CardContent, CardLink, CardTitle, StyledCard } from './styles';
 import { TitleSize } from '@/shared/ui';
 
 function ProductCard({ title, image, description, specifications, properties }) {
@@ -10,7 +10,7 @@ function ProductCard({ title, image, description, specifications, properties }) 
       <CardLink href='#'>
         <CardImage src={image} alt={title} width={248} height={248} />
       </CardLink>
-      <CardInfo>
+      <CardContent>
         <CardLink href='#'>
           <CardTitle size={TitleSize.SMALL}>{title}</CardTitle>
         </CardLink>
@@ -19,7 +19,7 @@ function ProductCard({ title, image, description, specifications, properties }) 
           specifications={specifications}
           properties={properties}
         />
-      </CardInfo>
+      </CardContent>
     </StyledCard>
   )
 };

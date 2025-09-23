@@ -1,6 +1,6 @@
 import { ProductCard } from '@/widgets/product-card';
 import { HiddenTitle, ProductItem, ProductsList, StyledCatalog } from './styles';
-import { images } from '../../model/images';
+import { images } from '../../model';
 
 function Catalog({ products }) {
   return products && products.length ? (
