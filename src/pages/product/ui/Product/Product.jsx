@@ -6,7 +6,7 @@ function ProductPage() {
   return (
     <StyledPage>
       <ProductSection>
-        <ProductCard {...products[0]} image={images.product1} />
+        <ProductCard {...products[0]} image={images.product1} isPage />
       </ProductSection>
     </StyledPage>
   )

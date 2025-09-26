@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Button } from '@/shared/ui'
 
 const TabsList = styled.div`
   display: flex;
@@ -17,8 +16,7 @@ const TabsButton = styled.button`
   line-height: var(--line-height);
 
   &:hover,
-  &:focus-visible {
-    
+  &:focus-visible {    
     scale: 1.1;
   }
 

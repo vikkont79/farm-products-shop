@@ -1,9 +1,30 @@
 import { Tabs } from '../Tabs/Tabs';
 import { CardImage, CardContent, CardLink, CardTitle, StyledCard } from './styles';
 import { TitleSize } from '@/shared/ui';
+import { Description } from '../Description/Description';
+import { Specifications } from '../Specifications/Specifications';
+import { Properties } from '../Properties/Properties';
+import { Accordion } from '../Accordion/Accordion';
 
-function ProductCard({ title, image, description, specifications, properties }) {
+function ProductCard({ title, image, description, specifications, properties, isPage }) {
 
+  const items = [
+    {
+      key: 'description',
+      title: description.title,
+      content: <Description description={description} />,
+    },
+    {
+      key: 'specifications',
+      title: specifications.title,
+      content: <Specifications specifications={specifications} />,
+    },
+    {
+      key: 'properties',
+      title: properties.title,
+      content: <Properties properties={properties} />,
+    },
+  ].filter(Boolean);
 
   return (
     <StyledCard>
@@ -14,11 +35,7 @@ function ProductCard({ title, image, description, specifications, properties }) 
         <CardLink href='#'>
           <CardTitle size={TitleSize.SMALL}>{title}</CardTitle>
         </CardLink>
-        <Tabs
-          description={description}
-          specifications={specifications}
-          properties={properties}
-        />
+        {isPage ? <Accordion items={items} /> :  <Tabs tabs={items} />}
       </CardContent>
     </StyledCard>
   )
