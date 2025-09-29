@@ -12,6 +12,12 @@ const GlobalStyle = createGlobalStyle`
   scale: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 html {
   block-size: 100%;
 }

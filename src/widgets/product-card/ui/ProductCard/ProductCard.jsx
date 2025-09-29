@@ -5,6 +5,7 @@ import { Description } from '../Description/Description';
 import { Specifications } from '../Specifications/Specifications';
 import { Properties } from '../Properties/Properties';
 import { Accordion } from '../Accordion/Accordion';
+import { PageProvider } from '../../lib';
 
 function ProductCard({ title, image, description, specifications, properties, isPage }) {
 
@@ -27,17 +28,19 @@ function ProductCard({ title, image, description, specifications, properties, is
   ].filter(Boolean);
 
   return (
-    <StyledCard>
-      <CardLink href='#'>
-        <CardImage src={image} alt={title} width={248} height={248} />
-      </CardLink>
-      <CardContent>
+    <PageProvider isPage={isPage}>
+      <StyledCard>
         <CardLink href='#'>
-          <CardTitle size={TitleSize.SMALL}>{title}</CardTitle>
+          <CardImage src={image} alt={title} width={248} height={248} />
         </CardLink>
-        {isPage ? <Accordion items={items} /> :  <Tabs tabs={items} />}
-      </CardContent>
-    </StyledCard>
+        <CardContent>
+          <CardLink href='#'>
+            <CardTitle size={isPage ? TitleSize.BIG : TitleSize.SMALL}>{title}</CardTitle>
+          </CardLink>
+          {isPage ? <Accordion items={items} /> : <Tabs tabs={items} />}
+        </CardContent>
+      </StyledCard>
+    </PageProvider>
   )
 };
 

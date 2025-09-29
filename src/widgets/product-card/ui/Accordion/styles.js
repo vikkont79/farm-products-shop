@@ -36,6 +36,7 @@ const ItemButton = styled.button`
   &:hover,
   &:focus-visible {    
     scale: 1.01;
+    transition: 0.1 s;
   }
 
   &:focus-visible {

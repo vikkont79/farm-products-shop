@@ -24,11 +24,12 @@ const CardLink = styled.a`
 
 const CardImage = styled.img`
   display: block;
+  min-inline-size: ${(props) => (props.theme.isPage ? "300px" : "248px")};
 `;
 
 const CardContent = styled.div`
  text-align: start;
- font-size: 14px;
+ font-size: ${(props) => (props.theme.isPage ? "18px" :  "14px")};
 `;
 
 const CardTitle = styled(Title)`
