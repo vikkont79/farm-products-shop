@@ -1,31 +1,11 @@
 import { Tabs } from '../Tabs/Tabs';
 import { CardImage, CardContent, CardLink, CardTitle, StyledCard } from './styles';
 import { TitleSize } from '@/shared/ui';
-import { Description } from '../Description/Description';
-import { Specifications } from '../Specifications/Specifications';
-import { Properties } from '../Properties/Properties';
 import { Accordion } from '../Accordion/Accordion';
-import { PageProvider } from '../../lib';
+import { PageProvider, useProductCard } from '../../lib';
 
-function ProductCard({ title, image, description, specifications, properties, isPage }) {
-
-  const items = [
-    {
-      key: 'description',
-      title: description.title,
-      content: <Description description={description} />,
-    },
-    {
-      key: 'specifications',
-      title: specifications.title,
-      content: <Specifications specifications={specifications} />,
-    },
-    {
-      key: 'properties',
-      title: properties.title,
-      content: <Properties properties={properties} />,
-    },
-  ].filter(Boolean);
+function ProductCard(props) {
+  const { title, image, items, isPage } = useProductCard(props);
 
   return (
     <PageProvider isPage={isPage}>
