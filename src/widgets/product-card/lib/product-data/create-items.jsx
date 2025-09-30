@@ -6,17 +6,17 @@ const createItems = (productData) => {
     {
       key: 'description',
       title: description.title,
-      content: <Description description={description} />,
+      content: <Description {...description} />,
     },
     {
       key: 'specifications',
       title: specifications.title,
-      content: <Specifications specifications={specifications} />,
+      content: <Specifications {...specifications} />,
     },
     {
       key: 'properties',
       title: properties.title,
-      content: <Properties properties={properties} />,
+      content: <Properties {...properties} />,
     },
   ].filter(Boolean);
 };

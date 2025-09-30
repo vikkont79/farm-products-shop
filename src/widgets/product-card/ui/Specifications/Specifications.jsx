@@ -1,6 +1,6 @@
 import { LabeledText } from "@/shared/ui";
 
-function Specifications({ specifications }) {
+function Specifications({ ...specifications }) {
   const { weight, breed, placeOfOrigin, shelfLife } = specifications;
 
   return (

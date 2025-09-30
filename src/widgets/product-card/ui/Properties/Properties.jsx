@@ -1,7 +1,7 @@
 import { LabeledText } from '@/shared/ui';
 
 
-function Properties({ properties }) {
+function Properties({ ...properties }) {
   const { energyValue, nutritionalValue } = properties;
 
   return (

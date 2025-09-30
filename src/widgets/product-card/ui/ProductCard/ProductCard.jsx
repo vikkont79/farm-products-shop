@@ -6,7 +6,7 @@ import { PageProvider, useProductCard } from '../../lib';
 
 function ProductCard(props) {
   const { title, image, items, isPage } = useProductCard(props);
-
+  
   return (
     <PageProvider isPage={isPage}>
       <StyledCard>

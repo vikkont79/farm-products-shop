@@ -1,13 +1,16 @@
 import { LabeledText } from "@/shared/ui";
-import { TabsPrice } from "./styles";
+import { MoreButton, TabsPrice } from "./styles";
 
-function Description({ description }) {
-  const { text, price } = description;
+function Description({ ...description }) {
+  const { text, price, showAll, onShowAll } = description;
 
   return (
     <>
       <LabeledText label="" value={text} />
-      <TabsPrice label="Цена: " value={price} />      
+      <MoreButton type="button" onClick={onShowAll}>
+        {showAll ? "Свернуть" : "Показать ещё"}
+      </MoreButton>
+      <TabsPrice label="Цена: " value={price} />
     </>
   )
 };
