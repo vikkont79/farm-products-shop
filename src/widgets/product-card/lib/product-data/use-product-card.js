@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useCallback } from 'react';
 
 const useProductCard = (props) => {
-  const { title, image, description, specifications, properties, isPage } = props;
+  const { title, image, description, specifications, properties, isPage, inStock } = props;
 
   const [showAll, setShowAll] = useState(false);
   const handleShowAll = useCallback(() => {
@@ -17,12 +17,13 @@ const useProductCard = (props) => {
       ...description,
       text: showAll ? description.text : description.text.slice(0, 100) + '...',
       showAll,
-      onShowAll: handleShowAll
+      onShowAll: handleShowAll,
+      inStock: inStock,
     },
     specifications,
     properties
     });
-  }, [description, specifications, properties, showAll, handleShowAll]);
+  }, [description, specifications, properties, showAll, handleShowAll, inStock]);
 
   return {
     title,
