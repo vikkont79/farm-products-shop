@@ -11,7 +11,7 @@ function Accordion({ items }) {
 
   useEffect(() => {
     setBlockSize(openContent.current.offsetHeight);
-  }, [height, activeItem, items]);
+  }, [activeItem, items]);
 
   return (
     <AccordionList>

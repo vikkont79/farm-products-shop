@@ -1,13 +1,9 @@
 import styled from 'styled-components';
-import { flexBetweenCenter } from '@/shared/styles';
+import { flexBetweenCenter, leftCheckboxFlex } from '@/shared/styles';
 import Check from '@/assets/images/check.svg';
 
-const StyledControl = styled.li` 
-  text-align: start;
-`;
-
 const ControlLabel = styled.label`
-  ${flexBetweenCenter}
+  ${(props) => props.$reverse ? leftCheckboxFlex : flexBetweenCenter}
   padding-block: 15px 14px;
 
   &:has(input:hover) {
@@ -45,8 +41,7 @@ const ControlInput = styled.input`
   }
 
   &:disabled {
-    background-color: #ccc;
-    
+    background-color: #ccc;    
   }
 
   &::after {
@@ -67,7 +62,6 @@ const ControlInput = styled.input`
 `;
 
 export {
-  StyledControl,
   ControlLabel,
   ControlInput,
 }

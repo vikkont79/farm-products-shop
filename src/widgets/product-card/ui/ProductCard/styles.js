@@ -5,6 +5,10 @@ const StyledCard = styled.article`
   display: flex;
   padding: 20px;
   gap: 20px;
+  ${props => props.selected && `
+    outline: 3px solid #FC7427;
+    outline-offset: -3px;
+  `}
 `;
 
 const CardLink = styled.a`

@@ -4,12 +4,12 @@ import { TitleSize } from '@/shared/ui';
 import { Accordion } from '../Accordion/Accordion';
 import { PageProvider, useProductCard } from '../../lib';
 
-function ProductCard(props) {
+function ProductCard({ selected, ...props }) {
   const { title, image, items, isPage } = useProductCard(props);
   
   return (
     <PageProvider isPage={isPage}>
-      <StyledCard>
+      <StyledCard selected={selected} >
         <CardLink href='#'>
           <CardImage src={image} alt={title} width={248} height={248} />
         </CardLink>

@@ -1,7 +1,17 @@
 import { HiddenTitle, ProductItem, ProductsList, Select, SelectTitle } from './styles';
 import { Control } from '@/shared/ui';
 
-function OrderSelect({ products }) {
+function OrderSelect({ products, onSelectionChange }) {
+  const handleCheckboxChange = (productId, isChecked) => {
+    onSelectionChange(prev => {
+      const newSelection = isChecked 
+        ? [...prev, productId]
+        : prev.filter(id => id !== productId);
+        
+        return newSelection;
+  });
+  };
+
   return products && products.length ? (
     <Select>
       <HiddenTitle>Блок выбора продуктов</HiddenTitle>
@@ -13,6 +23,7 @@ function OrderSelect({ products }) {
               type="checkbox"
               name={`product-${item.id}`}
               disabled={!item.inStock}
+              onChange={(e) => handleCheckboxChange(item.id, e.target.checked)}             
             >
               {item.title}
             </Control>

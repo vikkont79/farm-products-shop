@@ -1,7 +1,7 @@
 import { Details, DetailsTitle, HiddenTitle, Price, PriceValue, StyledInput } from './styles';
 import { Button, Input } from '@/shared/ui';
 
-function OrderDetails({ formId }) {
+function OrderDetails({ formId, price }) {
   return (
     <Details>
       <HiddenTitle>Блок информации о заказе</HiddenTitle>
@@ -18,7 +18,7 @@ function OrderDetails({ formId }) {
       </StyledInput>
       <Price>
         Цена
-        <PriceValue>1200 руб.</PriceValue>
+        <PriceValue>{price === 0 ? `Корзина пуста` : `${price} руб.`}</PriceValue>
       </Price>
       <Button minInlineSize={314} type="submit" >
         Купить
