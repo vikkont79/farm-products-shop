@@ -14,7 +14,7 @@ function App() {
       <Layout showBuyButton={showBuyButton}>
         <Routes>
           <Route path='/' element={<MainPage />} />
-          <Route path='order' element={<StorePage />} />
+          <Route path='/order' element={<StorePage />} />
         </Routes>
       </Layout>
     </>
