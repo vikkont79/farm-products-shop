@@ -7,8 +7,7 @@ import { useEffect } from 'react';
 function Catalog({ products, selectedProducts }) {
   const productRefs = useRef({});
   const catalogRef = useRef(null);
-  const lastSelectedId = selectedProducts[selectedProducts.length - 1];
-  console.log(productRefs)
+  const lastSelectedId = selectedProducts[selectedProducts.length - 1];  
 
   useEffect(() => {
     if (lastSelectedId && catalogRef.current) {

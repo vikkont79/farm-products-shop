@@ -10,8 +10,7 @@ import { Catalog } from '../Catalog/Catalog';
 import { useState } from 'react';
 
 function StorePage() {
-  const [selectedProducts, setSelectedProducts] = useState([]);
-  console.log('Selected:', selectedProducts);
+  const [selectedProducts, setSelectedProducts] = useState([]);  
 
   const totalPrice = selectedProducts.reduce((sum, productId) => {
     const product = products.find((item) => item.id === productId)
@@ -19,8 +18,7 @@ function StorePage() {
     const price = parseInt(product.description.price) || 0;
 
     return sum + (price || 0);
-  }, 0);
-  console.log(`Общая сумма: ${totalPrice} руб.`);
+  }, 0);  
 
   return (
     <StyledPage>
