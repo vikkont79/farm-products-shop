@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const StyledButton = styled.a`
+const StyledButton = styled(Link)`
   display: inline-block; 
   min-inline-size: ${(props) => props.$minInlineSize ? `${props.$minInlineSize}px` : "100%"};
   padding-inline: 12px;

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import Logo from '@assets/images/farmer-logo.svg?react';
+import { Link } from 'react-router-dom';
 
-const LogoLink = styled.a`
+const LogoLink = styled(Link)`
   display: flex;
   block-size: 44px;
   align-items: center;
