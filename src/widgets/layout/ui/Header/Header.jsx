@@ -1,5 +1,6 @@
 import { Button, Logo } from "@/shared/ui";
 import { StyledHeader, HeaderNav } from "./styles";
+import { AppRoute } from "@/app/constants/routes";
 
 function Header({ showBuyButton }) {
   return (
@@ -7,7 +8,7 @@ function Header({ showBuyButton }) {
       <HeaderNav>
         <Logo />
         {showBuyButton &&
-          <Button minInlineSize={260} link="/order">
+          <Button minInlineSize={260} link={AppRoute.Order}>
             Купить
           </Button>
         }

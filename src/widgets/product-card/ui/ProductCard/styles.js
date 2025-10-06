@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Title } from '@/shared/ui';
+import { Link } from 'react-router-dom';
 
 const StyledCard = styled.article`
   display: flex;
@@ -11,7 +12,7 @@ const StyledCard = styled.article`
   `}
 `;
 
-const CardLink = styled.a`
+const CardLink = styled(Link)`
   display: block;
   color: inherit;
   text-decoration: none;

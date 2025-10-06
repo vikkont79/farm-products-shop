@@ -1,13 +1,13 @@
 import { ProductCard } from '@/widgets/product-card';
 import { HiddenTitle, ProductItem, ProductsList, StyledCatalog } from './styles';
-import { images } from '../../model';
+import { images } from '@/entities/products';
 import { useRef } from 'react';
 import { useEffect } from 'react';
 
 function Catalog({ products, selectedProducts }) {
   const productRefs = useRef({});
   const catalogRef = useRef(null);
-  const lastSelectedId = selectedProducts[selectedProducts.length - 1];  
+  const lastSelectedId = selectedProducts[selectedProducts.length - 1];
 
   useEffect(() => {
     if (lastSelectedId && catalogRef.current) {

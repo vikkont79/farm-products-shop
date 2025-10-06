@@ -9,7 +9,7 @@ function MainPage() {
     <StyledPage>
       <About />
       <Advantages advantages={advantages} />
-      <Button minInlineSize={260} to="/order">
+      <Button minInlineSize={260} link="/order">
         Купить
       </Button>
     </StyledPage>
