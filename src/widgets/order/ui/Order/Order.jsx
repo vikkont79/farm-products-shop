@@ -1,15 +1,18 @@
+import { useState } from 'react';
 import { OrderDetails } from '../Details/Details';
 import { OrderSelect } from '../Select/Select';
 import { HiddenTitle, StyledForm } from './styles';
 
-function OrderForm({ products, formId, onSelectionChange, price }) {
+function OrderForm({ products, formId, selectedProducts, onSelectionChange, price }) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleSubmit = (evt) => {
     evt.preventDefault();
+    setIsSubmitting(true);
+
     const formData = new FormData(evt.target);
     formData.append('price', price)
-    for(const [key, value] of formData.entries()) {
-      console.log(`${key}: ${value}`);
-    }
+       
     fetch("https://echo.htmlacademy.ru/", {
       method: "POST",
       body: formData,
@@ -17,12 +20,18 @@ function OrderForm({ products, formId, onSelectionChange, price }) {
     .then(response => {
       if (response.ok) {
         console.log('Форма успешно отправлена');
+        alert(`Спасибо за заказ. Товары на сумму ${price} руб., будут доставлены в ближайшее время.`);
+        evt.target.reset();
+        onSelectionChange([]);
       } else {
         console.error('Ошибка при отправке формы:', response.statusText);
       }
     })
     .catch(error => {
       console.error('Ошибка сети:', error);
+    })
+    .finally(() => {
+      setIsSubmitting(false);
     });
   };
   
@@ -32,8 +41,9 @@ function OrderForm({ products, formId, onSelectionChange, price }) {
       <OrderSelect
         products={products}
         onSelectionChange={onSelectionChange}
+        selectedProducts={selectedProducts}
       />
-      <OrderDetails formId={formId} price={price} />
+      <OrderDetails formId={formId} price={price} disabled={isSubmitting} />
     </StyledForm>
   )
 };

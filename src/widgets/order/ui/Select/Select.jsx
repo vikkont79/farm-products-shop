@@ -1,15 +1,14 @@
 import { HiddenTitle, ProductItem, ProductsList, Select, SelectTitle } from './styles';
 import { Control } from '@/shared/ui';
 
-function OrderSelect({ products, onSelectionChange }) {
+function OrderSelect({ products, onSelectionChange, selectedProducts }) {
   const handleCheckboxChange = (productId, isChecked) => {
     onSelectionChange(prev => {
-      const newSelection = isChecked 
+      const newSelection = isChecked
         ? [...prev, productId]
         : prev.filter(id => id !== productId);
-        
-        return newSelection;
-  });
+      return newSelection;
+    });
   };
 
   return products && products.length ? (
@@ -19,11 +18,12 @@ function OrderSelect({ products, onSelectionChange }) {
       <ProductsList>
         {products.map((item) => (
           <ProductItem key={item.id}>
-            <Control              
+            <Control
               type="checkbox"
               name={`product-${item.id}`}
               disabled={!item.inStock}
-              onChange={(e) => handleCheckboxChange(item.id, e.target.checked)}             
+              checked={selectedProducts.includes(item.id)}
+              onChange={(e) => handleCheckboxChange(item.id, e.target.checked)}
             >
               {item.title}
             </Control>

@@ -28,6 +28,10 @@ const StyledButton = styled(Link)`
     outline: none;
     box-shadow: none;
   }
+
+  &:disabled {
+  opacity: 0.7;
+  }
 `;
 
 export { StyledButton };

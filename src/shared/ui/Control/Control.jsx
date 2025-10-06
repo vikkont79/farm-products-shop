@@ -1,6 +1,6 @@
 import { ControlInput, ControlLabel } from "./styles";
 
-function Control({ children, type, name, disabled, reverse, onChange }) {
+function Control({ children, type, name, disabled, checked, reverse, onChange }) {
   return (
     <ControlLabel $reverse={reverse}>
       {children}
@@ -8,6 +8,7 @@ function Control({ children, type, name, disabled, reverse, onChange }) {
         type={type}
         name={name}
         disabled={disabled}
+        checked={checked}
         onChange={onChange}
       />
     </ControlLabel>
